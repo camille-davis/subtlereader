@@ -11,7 +11,6 @@ get_header();
 <main id="primary" class="site-main">
 	<?php
 	if ( have_posts() ) :
-		?><h1 class="entry-title"><?php esc_html_e( 'Latest Articles', 'subtlereader' ); ?></h1><?php
 		while ( have_posts() ) :
 			the_post();
 			get_template_part( 'template-parts/content', get_post_type() );

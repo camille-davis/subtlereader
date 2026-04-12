@@ -22,6 +22,9 @@ require_once get_template_directory() . '/inc/misc-block-customizations.php';
  * @return void
  */
 function subtle_setup() {
+	// Let WordPress manage the document title via wp_head().
+	add_theme_support( 'title-tag' );
+
 	// Add support for custom logo.
 	add_theme_support( 'custom-logo' );
 
@@ -110,8 +113,19 @@ function subtle_enqueue_assets() {
 add_action( 'wp_enqueue_scripts', 'subtle_enqueue_assets' );
 
 // ============================================================================
-// Media & Images
+// Misc
 // ============================================================================
+
+/**
+ * Raises excerpt word count to 200 words.
+ *
+ * @param int $length Excerpt length in words.
+ * @return int
+ */
+function subtle_excerpt_length( $length ) {
+	return 100;
+}
+add_filter( 'excerpt_length', 'subtle_excerpt_length' );
 
 /**
  * Disables WordPress automatic image resizing.
