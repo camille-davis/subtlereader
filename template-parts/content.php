@@ -14,8 +14,8 @@ if ( is_singular() ) {
 	<?php
 } else {
 	the_title(
-		'<h2><a href="' . esc_url( get_permalink() ) . '">',
-		'</a></h2>'
+		'<h1 class="entry-title"><a href="' . esc_url( get_permalink() ) . '">',
+		'</a></h1>'
 	);
 	?>
 	<div class="entry-summary">
