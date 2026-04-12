@@ -14,15 +14,15 @@ if ( is_singular() ) {
 	<?php
 } else {
 	the_title(
-		'<h2><a href="' . esc_url( get_permalink() ) . '">',
-		'</a></h2>'
+		'<h1 class="entry-title"><a href="' . esc_url( get_permalink() ) . '">',
+		'</a></h1>'
 	);
 	?>
 	<div class="entry-summary">
 		<?php the_excerpt(); ?>
 		<p class="more-link-wrap">
 			<a href="<?php the_permalink(); ?>" class="more-link">
-				Continue reading
+				Continue reading <span aria-hidden="true">&raquo;</span>
 				<span class="visually-hidden">
 					<?php the_title(); ?>
 				</span>
