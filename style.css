@@ -1,0 +1,296 @@
+/*
+Theme Name: Subtle Reader
+Author: Camille Davis
+Text Domain: subtlereader
+*/
+
+/* ============================================================================
+   Normalize & Reset
+   ============================================================================ */
+
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+input,
+textarea,
+select,
+button {
+	font-family: inherit;
+	font-size: inherit;
+}
+
+/* ============================================================================
+   CSS Variables (Custom Properties)
+   ============================================================================ */
+
+:root {
+	/* Layout */
+	--side-padding-desktop: 2rem;
+	--side-padding-mobile: 1rem;
+	--vertical-space-large: 3rem;
+	--vertical-space-medium: 2rem;
+	--vertical-space-small: 1rem;
+	--border-radius: 0.25rem;
+}
+
+/* ============================================================================
+   Base Styles
+   ============================================================================ */
+
+body {
+	background-color: var(--background-color);
+	color: var(--text-color);
+	font-family: var(--body-font);
+	font-size: var(--body-font-size);
+	line-height: 1.6;
+	display: flex;
+  flex-direction: column;
+  align-items: center;
+	padding: var(--vertical-space-large) var(--side-padding-desktop);
+}
+
+@media (max-width: 1080px) {
+	body {
+		padding-left: var(--side-padding-mobile);
+		padding-right: var(--side-padding-mobile);
+	}
+}
+
+.site-header,
+main,
+.site-footer,
+.editor-visual-editor__post-title-wrapper, /* editor */
+.is-root-container /* editor */ {
+	width: var(--content-width);
+	max-width: 100%;
+}
+
+/* ============================================================================
+   Global Elements
+   ============================================================================ */
+
+a {
+	color: var(--link-color);
+}
+
+a:hover {
+	text-decoration: none;
+}
+
+p,
+ul,
+button,
+.wp-block-buttons,
+input,
+textarea {
+	margin-bottom: var(--vertical-space-small);
+}
+
+ul {
+	padding-left: 1rem;
+}
+
+/* ============================================================================
+   Headings
+   ============================================================================ */
+
+/* Heading typography */
+h1 { font-size: var(--h1-font-size); }
+h2 { font-size: var(--h2-font-size); }
+h3 { font-size: var(--h3-font-size); }
+h4 { font-size: var(--h4-font-size); }
+h5 { font-size: var(--h5-font-size); }
+h6 { font-size: var(--h6-font-size); }
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+	font-weight: normal;
+	font-family: var(--heading-font);
+}
+
+/* Heading Spacing */
+h1,
+h2,
+h3 {
+	margin-top: calc(var(--vertical-space-large) - var(--vertical-space-small));
+}
+
+h1,
+h2 {
+	margin-bottom: var(--vertical-space-medium);
+}
+
+h3,
+h4,
+h5,
+h6 {
+	margin-bottom: var(--vertical-space-small);
+}
+
+h1:first-child,
+h2:first-child,
+h3:first-child,
+h4:first-child,
+h5:first-child,
+h6:first-child {
+	margin-top: 0;
+}
+
+/* ============================================================================
+   Form Elements
+   ============================================================================ */
+
+/* Buttons */
+button,
+.wp-element-button {
+	border: none;
+	border-radius: var(--border-radius);
+	padding: 0.5rem 1.5rem;
+	background-color: var(--link-color);
+	color: var(--background-color);
+	font-weight: bold;
+}
+
+button:hover,
+.wp-element-button:hover {
+	color: var(--link-color);
+	background-color: var(--background-color);
+}
+
+/* Inputs & Textareas */
+input,
+textarea {
+	border: 0.125rem solid var(--text-color);
+	border-radius: var(--border-radius);
+	padding: 0.5rem 1rem;
+	background-color: transparent;
+	color: var(--text);
+}
+
+/* Form Groups */
+.form-group {
+	display: flex;
+	flex-direction: column;
+}
+
+/* Labels */
+label {
+	margin-bottom: 0.25rem;
+}
+
+/* ============================================================================
+   Header & Navigation
+   ============================================================================ */
+
+.site-header {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	padding-bottom: var(--vertical-space-medium);
+}
+
+.site-header a {
+	text-decoration: none;
+}
+
+.site-logo {
+	margin-bottom: var(--vertical-space-small);
+	font-family: var(--heading-font);
+	font-size: var(--site-name-font-size);
+}
+
+.menu-links {
+	list-style: none;
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+	row-gap: 0.35rem;
+	column-gap: 3rem;
+	font-family: var(--heading-font);
+	font-size: var(--nav-link-font-size);
+}
+
+/* ============================================================================
+   Footer
+   ============================================================================ */
+
+footer {
+	padding-top: var(--vertical-space-large);
+	text-align: center;
+}
+
+/* ============================================================================
+   Page Content
+   ============================================================================ */
+
+.entry-title {
+	margin-bottom: var(--vertical-space-medium);
+	width: var(--content-width);
+	max-width: 100%;
+}
+
+.entry-summary .more-link-wrap {
+	margin-top: var(--vertical-space-small);
+	margin-bottom: 0;
+}
+
+/* ============================================================================
+   Post Navigation
+   ============================================================================ */
+
+.post-navigation {
+	margin-top: var(--vertical-space-large);
+}
+
+.nav-links {
+	display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 3rem;
+}
+
+.nav-links a {
+	text-decoration: none;
+}
+
+/* ============================================================================
+   Utility Classes
+   ============================================================================ */
+
+.visually-hidden {
+	position: absolute !important;
+  width: 1px !important;
+  height: 1px !important;
+  padding: 0 !important;
+  margin: -1px !important;
+  overflow: hidden !important;
+  clip: rect(0, 0, 0, 0) !important;
+  white-space: nowrap !important;
+  border: 0 !important;
+}
+
+.is-position-absolute {
+	position: absolute !important;
+}
+
+.is-fullwidth-image {
+	min-width: 100%;
+}
+
+.is-fullwidth-image.wp-block-image .components-resizable-box__container img, /* editor */
+.is-fullwidth-image img {
+	width: 100%;
+}
+
+.aligncenter,
+.has-text-align-center {
+	margin-left: auto;
+	margin-right: auto;
+}

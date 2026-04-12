@@ -1,0 +1,23 @@
+/* 'Reset' buttons */
+
+#sub-accordion-section-subtle_typography_fonts .customize-control,
+#sub-accordion-section-subtle_typography_font_sizes .customize-control {
+	display: flex;
+	flex-wrap: wrap;
+}
+
+#sub-accordion-section-subtle_typography_fonts .customize-control-title,
+#sub-accordion-section-subtle_typography_font_sizes .customize-control-title {
+	width: 100%;
+}
+
+#sub-accordion-section-subtle_typography_fonts input,
+#sub-accordion-section-subtle_typography_font_sizes input {
+	width: auto;
+	flex-grow: 1;
+}
+
+#sub-accordion-section-subtle_typography_fonts .reset-button,
+#sub-accordion-section-subtle_typography_font_sizes .reset-button {
+	margin-left: 0.5rem;
+}
