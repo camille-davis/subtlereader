@@ -308,6 +308,7 @@ footer {
 }
 
 .wp-block-image figcaption {
+	text-align: center;
 	margin-bottom: 0;
 }
 
