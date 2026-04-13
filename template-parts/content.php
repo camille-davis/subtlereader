@@ -22,7 +22,7 @@ if ( is_singular() ) {
 		<?php the_excerpt(); ?>
 		<p class="more-link-wrap">
 			<a href="<?php the_permalink(); ?>" class="more-link">
-				Continue reading
+				Continue reading <span aria-hidden="true">&raquo;</span>
 				<span class="visually-hidden">
 					<?php the_title(); ?>
 				</span>

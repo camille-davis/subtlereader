@@ -262,23 +262,39 @@ footer {
 	font-size: var(--body-font-size);
 }
 
+/* Post Pagination */
+.pagination {
+	margin-top: var(--vertical-space-medium);
+	text-align: center;
+}
+
+.pagination .nav-links {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+}
+
+.pagination .nav-links > * {
+	padding: .5rem 1rem;
+}
+
+/* ============================================================================
+   Single Post
+   ============================================================================ */
+
 /* Post Navigation */
 .post-navigation {
 	margin-top: var(--vertical-space-large);
 }
 
-.nav-links {
+.post-navigation .nav-links {
 	display: flex;
-  justify-content: space-between;
-  flex-wrap: wrap;
-  gap: 3rem;
+	justify-content: space-between;
+	flex-wrap: wrap;
+	gap: 3rem;
 }
 
-.nav-links a {
-	text-decoration: none;
-}
-
-.nav-next {
+.post-navigation .nav-next {
 	margin-left: auto;
 }
 
